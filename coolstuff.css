@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* .card-container {
+  display: flex;
+  gap: 20px; /* Space between cards 
+ 
+}/*
+
+ /* .card-glow {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+} */
+/* 
+.card-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  text-align: left;
+  margin: 10px 0 0 0;
+} */
+
+.card-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+}
+
+.card-glow {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor:pointer;
+  background: #000000;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle,#011e52, transparent 50%);
+
+  transform: translate(-50%, -50%);
+  pointer-events: painted;
+  transition: transform 0.3s ease-out;
+  opacity: 0;
+}
+
+.card-glow:hover::before {
+  transform: translate(var(--mouse-x), var(--mouse-y));
+  opacity: 1;
+
+}
+
+
+.card-body-glow {
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+.card-title-glow {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-text-glow {
+  margin-top: 10px;
+  font-size: 1rem;
+}
